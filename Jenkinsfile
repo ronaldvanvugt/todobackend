@@ -20,6 +20,7 @@ node {
         }
         sh "make publish"
 
+/*
         stage 'Deploy release'
         sh "printf \$(git rev-parse --short HEAD) > tag.tmp"
         def imageTag = readFile 'tag.tmp'
@@ -28,6 +29,7 @@ node {
             name: 'IMAGE_TAG',
             value: 'ronaldvanvugt/todobackend:' + imageTag
         ]]
+*/
     }
     finally {
         stage 'Collect test reports'
